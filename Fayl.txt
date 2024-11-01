@@ -1,0 +1,20 @@
+import pandas as pd
+
+# 1.DataFrame yaratish
+data={
+'Ism':['Rayhona','Mohinur','Sardor','Sanjar','Aql','Baxrom','Odil','Boqiboy'],
+'Yoshi':[25,30,22,23,24,21,29,31],
+'Shahar':['Toshkent','Fargʻona','Buxoro','Andijon','Namangan','Qashqadaryo','Samarqand','Navoiy']
+}
+df=pd.DataFrame(data)
+
+# 2.Ma'lumotlarni koʻrish
+print(df)
+
+# 3.Filtrlash
+young_people=df[df['Yoshi']<20]
+print("30 yoshdan kichiklar:\n",young_people)
+
+# 4.Oʻzgartirish
+df['Yoshi']+=1 # Har bir shaxsning yoshi 1 ga oshirish 
+print("Yangilangan DataFrame:\n",df)
